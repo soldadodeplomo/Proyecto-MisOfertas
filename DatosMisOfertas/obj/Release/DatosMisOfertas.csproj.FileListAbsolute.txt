@@ -1,0 +1,15 @@
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\DatosMisOfertas.dll.config
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\DatosMisOfertas.dll
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\DatosMisOfertas.pdb
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\EntityFramework.dll
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\itextsharp.dll
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\EntityFramework.xml
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Release\itextsharp.xml
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Release\DatosMisOfertas.csprojAssemblyReference.cache
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Release\DatosMisOfertas.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Release\DatosMisOfertas.csproj.CopyComplete
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Release\DatosMisOfertas.dll
+C:\Users\nicol\Desktop\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Release\DatosMisOfertas.pdb

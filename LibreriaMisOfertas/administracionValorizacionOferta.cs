@@ -21,7 +21,7 @@ namespace LibreriaMisOfertas
             cmd.Parameters.Add("rut",OracleDbType.Varchar2).Value=rutCons;
             cmd.Parameters.Add("correo",OracleDbType.Varchar2).Value=correoCons;
             cmd.Parameters.Add("rubro",OracleDbType.Int32).Value=idRubro;
-            //cmd.Parameters.Add("max",OracleDbType.Int32).Value=tempImage.obtenerMaxID();
+            //cmd.Parameters.Add("max",OracleDbType.In6t32).Value=tempImage.obtenerMaxID();
             cmd.ExecuteNonQuery();
             return true;
         }

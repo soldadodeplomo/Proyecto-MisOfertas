@@ -29,10 +29,14 @@
     </nav>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <p class="text-primary text-center" style="font-size: 30px;">¡BIENVENIDO
-        <asp:Label ID="lblConsumidor" runat="server"></asp:Label>
-        !<br />
+    <p class="text-primary text-center" style="font-size: 30px;">
         ¡AQUÍ PODRÁS VALORIZAR TUS COMPRAS!</p>
+            <asp:Label ID="lblConsumidor" runat="server" Visible="false"></asp:Label>
+        <br />
+<%--        <p class="text-primary text-center" style="font-size: 30px;">¡BIENVENIDO
+        <asp:Label ID="Label1" runat="server" Visible="false"></asp:Label>
+        !<br />
+        ¡AQUÍ PODRÁS VALORIZAR TUS COMPRAS!</p>--%>
     <div class="container" style="width: 400px;">
         <div class="panel panel-default">
             <div class="panel-heading" style="text-align: center;">VALORIZAR COMPRA</div>
@@ -52,7 +56,12 @@
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Rubro compra</label>
                         <%--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
                         <asp:DropDownList ID="ddlRubroCompra" runat="server" CssClass="custom-select custom-select-lg mb-2 center-block" Style="width: 350px;" required></asp:DropDownList>
-                    </div>                    
+                    </div>                   
+                    <div class="inner-addon left-addon">
+                        <label for="exampleInputPassword1" style="padding-left: 10px;">Lugar de la compra</label>
+                        <%--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">--%>
+                        <asp:DropDownList ID="ddlLocalVenta" runat="server" CssClass="custom-select custom-select-lg mb-2 center-block" Style="width: 350px;" required></asp:DropDownList>
+                    </div>  
                     <asp:Label ID="lblMensajeError" runat="server"></asp:Label>
                 </div>
             </div>

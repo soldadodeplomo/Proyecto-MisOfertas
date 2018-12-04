@@ -46,6 +46,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="BarcodeLib, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
       <HintPath>..\packages\BarcodeLib.1.3.0.0\lib\net20\BarcodeLib.dll</HintPath>
       <Private>True</Private>
@@ -62,10 +66,16 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>WebService\Referencias\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -84,10 +94,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\calendar.css" />
+    <Content Include="imagenes\calendar-512.png" />
+    <Content Include="imagenes\carne_molida.jpg" />
+    <Content Include="imagenes\cristal.jpg" />
+    <Content Include="imagenes\fondo.jpeg" />
+    <Content Include="imagenes\heineken.jpg" />
+    <Content Include="imagenes\k10.jpg" />
+    <Content Include="imagenes\lavadora.jpg" />
+    <Content Include="imagenes\lenovo_g4080.png" />
+    <Content Include="imagenes\pantalon_hombre.jpg" />
+    <Content Include="imagenes\powerade.png" />
+    <Content Include="imagenes\s9.png" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="master\paginaMaestra.Master" />
+    <Content Include="vistas\administradorTienda\producto\test.aspx" />
     <Content Include="WebService\WebService.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -210,6 +233,13 @@
     <Compile Include="vistas\administradorTienda\producto\listar_productos.aspx.designer.cs">
       <DependentUpon>listar_productos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vistas\administradorTienda\producto\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\administradorTienda\producto\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vistas\administradorTienda\publicar_oferta.aspx.cs">
       <DependentUpon>publicar_oferta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -294,6 +324,9 @@
       <Project>{8e8749da-e239-4c70-b05c-5e55f3bbb851}</Project>
       <Name>LibreriaMisOfertas</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

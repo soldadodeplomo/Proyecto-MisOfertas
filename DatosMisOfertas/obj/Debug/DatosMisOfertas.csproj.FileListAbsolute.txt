@@ -11,3 +11,29 @@ C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\D
 C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.xml
 C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\DatosMisOfertas.dll.config
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\DatosMisOfertas.dll
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\DatosMisOfertas.pdb
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.dll
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\itextsharp.dll
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.xml
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\itextsharp.xml
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Debug\DatosMisOfertas.csprojResolveAssemblyReference.cache
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Debug\DatosMisOfertas.dll
+C:\Users\nicolas\Downloads\webMisOfertasResponsive\webMisOfertasResponsive\DatosMisOfertas\obj\Debug\DatosMisOfertas.pdb
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\DatosMisOfertas.dll.config
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\DatosMisOfertas.dll
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\DatosMisOfertas.pdb
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.dll
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\itextsharp.dll
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.xml
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\itextsharp.xml
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\obj\Debug\DatosMisOfertas.csprojResolveAssemblyReference.cache
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\obj\Debug\DatosMisOfertas.dll
+C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsiveWork\webMisOfertasResponsive\DatosMisOfertas\obj\Debug\DatosMisOfertas.pdb

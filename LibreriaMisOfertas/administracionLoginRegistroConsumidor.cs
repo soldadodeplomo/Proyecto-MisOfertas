@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -71,16 +70,18 @@ namespace LibreriaMisOfertas
             conexionOracle con = new conexionOracle();
             OracleConnection conexionOracle = new OracleConnection(con.getConnectionString);
             conexionOracle.Open();
-            OracleCommand cmd = new OracleCommand("SELECT rut_consumidor, correo_consumidor, nombre_consumidor FROM misOfertasDB.consumidor WHERE correo_consumidor =:consumidor AND contrasena_consumidor =:contrasena", conexionOracle);
+            OracleCommand cmd = new OracleCommand("SELECT id_consumidor, rut_consumidor, correo_consumidor, nombre_consumidor, recibir_oferta FROM misOfertasDB.consumidor WHERE correo_consumidor =:consumidor AND contrasena_consumidor =:contrasena", conexionOracle);
             cmd.Parameters.Add(":consumidor", cons.correoConsumidor);
             cmd.Parameters.Add(":contrasena", cons.contrasenaConsumidor);
             OracleDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
                 //variables globales
+                consumidorExterno.idConsumidor =Convert.ToInt32(reader["id_consumidor"]);
                 consumidorExterno.nombreConsumidor = reader["nombre_consumidor"].ToString();
                 consumidorExterno.correoConsumidor = reader["correo_consumidor"].ToString();
                 consumidorExterno.runConsumidor = reader["rut_consumidor"].ToString();
+                consumidorExterno.recibirOferta =Convert.ToChar(reader["recibir_oferta"]);
 
                 reader.Close();
                 conexionOracle.Close();

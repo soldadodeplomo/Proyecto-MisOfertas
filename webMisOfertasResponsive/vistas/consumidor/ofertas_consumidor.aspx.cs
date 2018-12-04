@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LibreriaMisOfertas;
+using DatosMisOfertas;
 
 namespace webMisOfertasResponsive.vistas.consumidor
 {
@@ -11,13 +13,24 @@ namespace webMisOfertasResponsive.vistas.consumidor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Consumidor c = new Consumidor();   
             if(Session["usuarioTemporal"]!=null && Session["consumidorTemporal"]!=null)
             {
                 lblNombreUsuario.Text = Session["usuarioTemporal"].ToString();
+                c = (Consumidor)Session["consumidorTemporal"];
             }
             else
             {
                 Response.Redirect("/vistas/login_consumidor.aspx");
+            }
+            administrarOfertasPorCorreo oferta = new administrarOfertasPorCorreo();
+            if(oferta.ifValoraciones(c))
+            {
+                oferta.listarOfertasPorRubro(phOfertaConsumidor);
+            }
+            else
+            {
+                lblMensajito.Text = oferta.mensajeConsumidor;
             }
         }
 

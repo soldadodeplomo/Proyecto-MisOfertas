@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="links" runat="server">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
          <asp:Image ID="Image1" runat="server" ImageUrl="~/imagenes/test.png" />
-              <%--<a class="navbar-brand" href="#">Navbar</a>--%>
+        <%--<a class="navbar-brand" href="#">Navbar</a>--%>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,7 +25,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/vistas/administradorTienda/producto/insertar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">AGREGAR PRODUCTO</a>
                         <a class="dropdown-item" href="/vistas/administradorTienda/producto/actualizar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">ACTUALIZAR PRODUCTO</a>
-                        <a class="dropdown-item" href="/vistas/administradorTienda/producto/deshabilitar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">DESHABILITAR PRODUCTO</a>
+                        <%--<a class="dropdown-item" href="/vistas/administradorTienda/producto/deshabilitar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">DESHABILITAR PRODUCTO</a>--%>
                         <a class="dropdown-item" href="/vistas/administradorTienda/producto/listar_productos.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">LISTAR PRODUCTOS</a>
                     </div>
                 </li>
@@ -34,7 +34,7 @@
     </nav>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <p class="text-primary text-center" style="font-size: 30px;">DASHBOARD INSERTAR PRODUCTO</p>
+    <p class="text-primary text-center" style="font-size: 30px;">INSERTAR PRODUCTO</p>
     <div class="container" style="width:400px;">
         <div class="panel panel-default">
             <div class="panel-heading" style="text-align:center;">INSERTAR NUEVO PRODUCTO</div>
@@ -49,19 +49,23 @@
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Precio producto</label>
                         <asp:TextBox ID="txtPrecioProducto" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" placeholder="Ingrese precio del producto (solo números)" required></asp:TextBox>
                     </div>
+                    <br />
                     <div class="inner-addon left-addon">
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Marca producto</label>
                         <%--<asp:TextBox ID="txtMarcaProducto" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" placeholder="Ingrese la marca del producto" required></asp:TextBox>--%>
                         <asp:DropDownList ID="ddlMarca"  runat="server" CssClass="custom-select custom-select-lg mb-2 center-block" style="width:350px;" required></asp:DropDownList>
                     </div>
+                    <br />
                     <div class="inner-addon left-addon">
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Imagen producto</label>
                         <asp:FileUpload ID="inputImagenProducto" runat="server" Style="padding-left: 11px;" required/>
                     </div>
+                    <br />
                     <div class="inner-addon left-addon">
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Venta mínima</label>
                         <asp:TextBox ID="txtVentaMinima" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" placeholder="Ingrese la venta mímina del producto" required></asp:TextBox>
                     </div>
+                    <br />
                     <div class="inner-addon left-addon">
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Venta máxima</label>
                         <asp:TextBox ID="txtVentaMaxima" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" placeholder="Ingrese la venta mímina del producto" required></asp:TextBox>
@@ -70,10 +74,7 @@
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Rubro producto</label>
                         <asp:DropDownList ID="ddlRubro" runat="server" CssClass="custom-select custom-select-lg mb-2 center-block" style="width:350px;" required></asp:DropDownList>
                     </div>
-                    <div class="inner-addon left-addon">
-                        <label for="exampleInputPassword1" style="padding-left: 10px;">Lote proveedor</label>
-                        <asp:DropDownList ID="ddLote" runat="server" CssClass="custom-select custom-select-lg mb-2 center-block" style="width:350px;" required></asp:DropDownList>
-                    </div>
+                    <br />
                     <div class="inner-addon left-addon">
                         <label for="exampleInputPassword1" style="padding-left: 10px;">Sub familia producto</label>
                         <asp:DropDownList ID="ddlSubFamilia" runat="server" CssClass="custom-select custom-select-lg mb-2 center-block" style="width:350px;" required></asp:DropDownList>

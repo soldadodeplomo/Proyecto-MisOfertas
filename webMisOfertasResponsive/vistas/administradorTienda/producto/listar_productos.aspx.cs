@@ -14,24 +14,19 @@ namespace webMisOfertasResponsive.vistas.administradorTienda.producto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            administracionProducto producto = new administracionProducto();
-            DataTable dt = new DataTable();
-            dt = producto.listaProductos();
-            StringBuilder sb = new StringBuilder();
-            sb.Append("<table>");
-            foreach (DataRow dr in dt.Rows)
+            if (Session["administrador"] != null)
             {
-                sb.Append("<tr>");
-                foreach (DataColumn dc in dt.Columns)
-                {
-                    sb.Append("<td>");
-                    sb.Append(dr[dc.ColumnName].ToString());
-                    sb.Append("</td>");
-                }
-                sb.Append("</tr>");
+                lblUsuario.Text = Session["administrador"].ToString();
             }
-            sb.Append("</table>");
-            string tabla = sb.ToString();
+            else
+            {
+                Response.Redirect("/vistas/login_administrador_tienda.aspx");
+            }
+            administracionProducto producto = new administracionProducto();
+            if(!IsPostBack)
+            {
+                producto.listarTodoProductos(phListarProducto);
+            }
         }        
     }
 }

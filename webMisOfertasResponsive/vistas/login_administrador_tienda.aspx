@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <div class="inner-addon left-addon"> 
                         <label for="exampleInputEmail1" style="padding-left: 10px;">R.U.N administrador</label>                       
-                        <asp:TextBox ID="txtRunAdmTienda" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" MaxLength="50" placeholder="Ej: 12.345.678-9" required></asp:TextBox>
+                        <asp:TextBox ID="txtRunAdmTienda" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" MaxLength="50" placeholder="Ej: xx.xxx.xxx-x" required></asp:TextBox>
                         <%--                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>--%>
                         <br />
                     </div>

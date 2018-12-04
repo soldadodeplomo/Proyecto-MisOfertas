@@ -17,8 +17,6 @@ namespace webMisOfertasResponsive.vistas.consumidor
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-            ddl.llenarDDLRubro(ddlRubroCompra);
-            ddl.llenarDDLValoracion(ddlPuntajeValoracion);
             if (Session["usuarioTemporal"] != null && Session["consumidorTemporal"] != null)
             {
                 lblConsumidor.Text = Session["usuarioTemporal"].ToString();
@@ -26,6 +24,12 @@ namespace webMisOfertasResponsive.vistas.consumidor
             else
             {
                 Response.Redirect("/vistas/login_consumidor.aspx");
+            }
+            if(!IsPostBack)
+            {
+                ddl.llenarDDLRubro(ddlRubroCompra);
+                ddl.llenarDDLValoracion(ddlPuntajeValoracion);
+                ddl.llenarLocalVenta(ddlLocalVenta);
             }
         }
         protected void btnValorizarOferta_Click(object sender, EventArgs e)
@@ -41,7 +45,7 @@ namespace webMisOfertasResponsive.vistas.consumidor
 
             boleta.agregarBoleta(boleta.imageToByte(fuImagenBoleta.FileName));
             puntos.actualizarCupon(t);
-            valoracion.agregarValoracionOferta(ddlPuntajeValoracion.SelectedIndex, t.runConsumidor, t.correoConsumidor, Convert.ToInt32(ddlRubroCompra.SelectedValue));
+            valoracion.agregarValoracionOferta(ddlPuntajeValoracion.SelectedIndex, t.idConsumidor, t.runConsumidor, t.correoConsumidor, Convert.ToInt32(ddlLocalVenta.SelectedValue), Convert.ToInt32(ddlRubroCompra.SelectedValue));
             lblMensajeError.Text = "¡Haz acumulado 10 puntos!. En total tienes: "+puntos.total;// agregar total de puntos
         }
 

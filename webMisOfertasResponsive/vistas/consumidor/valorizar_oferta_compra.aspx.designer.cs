@@ -67,6 +67,15 @@ namespace webMisOfertasResponsive.vistas.consumidor {
         protected global::System.Web.UI.WebControls.DropDownList ddlRubroCompra;
         
         /// <summary>
+        /// Control ddlLocalVenta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLocalVenta;
+        
+        /// <summary>
         /// Control lblMensajeError.
         /// </summary>
         /// <remarks>

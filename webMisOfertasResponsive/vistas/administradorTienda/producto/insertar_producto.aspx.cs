@@ -25,32 +25,41 @@ namespace webMisOfertasResponsive.vistas.administradorTienda.producto
             {
                 Response.Redirect("/vistas/login_administrador_tienda.aspx");
             }
-
             llenarDDL ddl = new llenarDDL();
-            ddl.llenarDDLRubro(ddlRubro);
-            ddl.llenarLote(ddLote);
-            ddl.llenarSubFamilia(ddlSubFamilia);
-            ddl.llenarMarca(ddlMarca);
+            if (!IsPostBack)
+            {
+                ddl.llenarDDLRubro(ddlRubro);
+                //ddl.llenarLote(ddLote);
+                ddl.llenarSubFamilia(ddlSubFamilia);
+                ddl.llenarMarca(ddlMarca);
+            }
         }
 
         protected void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             try
             {
-                Producto prodTemporal = new Producto();
-                administracionProducto admProducto = new administracionProducto();
-                prodTemporal.nombreProducto = txtNombreProducto.Text;
-                prodTemporal.precioProducto = Convert.ToInt32(txtPrecioProducto.Text);
-                prodTemporal.marca = ddlMarca.SelectedValue;
-                prodTemporal.imagenProducto = admProducto.imageToByte(inputImagenProducto.FileName);
-                prodTemporal.ventaMin = Convert.ToInt32(txtVentaMinima.Text);
-                prodTemporal.ventaMax = Convert.ToInt32(txtVentaMaxima.Text);
-                prodTemporal.idRubro = Convert.ToInt32(ddlRubro.SelectedValue);
-                prodTemporal.idLote = Convert.ToInt32(ddLote.SelectedValue);
-                prodTemporal.idSubFamilia = Convert.ToInt32(ddlSubFamilia.SelectedValue);
-                admProducto.agregarProducto(prodTemporal);
-                limpiarCampos();
-                lblMensaje.Text = "Producto " + txtNombreProducto.Text + " agregado con éxito.";
+                if(Convert.ToInt32(txtVentaMaxima.Text) < Convert.ToInt32(txtVentaMinima.Text))
+                {
+                    lblMensaje.Text = "La venta mínima debe ser menor a la venta máxima";
+                }
+                else
+                {
+                    Producto prodTemporal = new Producto();
+                    administracionProducto admProducto = new administracionProducto();
+                    prodTemporal.nombreProducto = txtNombreProducto.Text;
+                    prodTemporal.precioProducto = Convert.ToInt32(txtPrecioProducto.Text);
+                    prodTemporal.marca = ddlMarca.SelectedValue;
+                    prodTemporal.imagenProducto = admProducto.imageToByte(inputImagenProducto.FileName);
+                    prodTemporal.ventaMin = Convert.ToInt32(txtVentaMinima.Text);
+                    prodTemporal.ventaMax = Convert.ToInt32(txtVentaMaxima.Text);
+                    prodTemporal.idRubro = Convert.ToInt32(ddlRubro.SelectedValue);
+                    //prodTemporal.idLote = Convert.ToInt32(ddLote.SelectedValue);
+                    prodTemporal.idSubFamilia = Convert.ToInt32(ddlSubFamilia.SelectedValue);
+                    admProducto.agregarProducto(prodTemporal, ddlMarca);
+                    limpiarCampos();
+                    lblMensaje.Text = "Producto " + txtNombreProducto.Text + " agregado con éxito.\n Revisa los productos existentes <a href='~/vistas/administradorTienda/producto/listar_productos.aspx'>aquí</a>" + ".";
+                }                
             } 
             catch (Exception ex)
             {

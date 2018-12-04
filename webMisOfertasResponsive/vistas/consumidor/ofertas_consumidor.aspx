@@ -31,18 +31,47 @@
     </nav>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+<%--        <style>
+            #main
+        {
+            margin:150px auto;
+            width:600px;
+        }
+        table
+        {
+            background-color:dodgerblue;
+            text-align:left;
+            border-collapse:collapse;
+            width:100%;
+        }
+        th, td
+        {
+            padding:20px;
+        }
+        thead
+        {
+            background-color:#a5a5a5;
+            border-bottom:solid 5px #0F362D;
+            color:white;
+        }
+        tr:nth-child(even)
+        {
+            background-color:#ddd;
+        }
+        tr:hover td
+        {
+            background-color:dodgerblue;
+            color:black;            
+        }
+        
+    </style>--%>
     <p class="text-primary text-center" style="font-size: 30px;">¡BIENVENIDO A MIS OFERTAS, <asp:Label ID="lblNombreUsuario" runat="server"></asp:Label>
-        !<br />¡AQUÍ PODRÁS VISUALIZAR TUS OFERTAS PERSONALIZADAS!</p>
-    <div class="container" style="width:1500px;">
+        !<br />¡TUS OFERTAS PERSONALIZADAS!</p>
+                <asp:Label ID="lblMensajito" runat="server" Text=""></asp:Label>
+    <div class="container" style="width:1000px;">
         <div class="panel panel-default">
             <div class="panel-heading" style="text-align:center;">OFERTAS PERSONALIZADAS</div>
-            <div class="panel-body">
-                <div class="form-group">
-
-                </div>
-            </div>
-            <div class="panel-footer">                
+            <asp:PlaceHolder ID="phOfertaConsumidor" runat="server"></asp:PlaceHolder>
             </div>           
         </div>
-    </div>
 </asp:Content>

@@ -29,10 +29,11 @@ namespace webMisOfertasResponsive.vistas
                 Session["usuarioTemporal"] = admConsumidor.consumidorExterno.nombreConsumidor.ToUpper();
 
                 //Se asignan los datos traidos desde la bd a la instancia @temp de Consumidor
+                temp.idConsumidor = admConsumidor.consumidorExterno.idConsumidor;
                 temp.nombreConsumidor = admConsumidor.consumidorExterno.nombreConsumidor;
                 temp.runConsumidor = admConsumidor.consumidorExterno.runConsumidor;
                 temp.correoConsumidor = admConsumidor.consumidorExterno.correoConsumidor;
-
+                temp.recibirOferta = admConsumidor.consumidorExterno.recibirOferta;
                 //se guardan la instancia @temp en la variable de session interna
                 Session["consumidorTemporal"] = temp;
                 Response.Redirect("/vistas/consumidor/ofertas_consumidor.aspx");

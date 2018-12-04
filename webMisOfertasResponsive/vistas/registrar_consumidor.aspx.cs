@@ -15,7 +15,10 @@ namespace webMisOfertasResponsive.vistas
         protected void Page_Load(object sender, EventArgs e)
         {
             ValidationSettings.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-            ddl.llenarComuna(ddlComunaConsumidor);
+            if(!IsPostBack)
+            {
+                ddl.llenarComuna(ddlComunaConsumidor);
+            }
         }
 
         protected void btnIngresarSesionAdminitrador_Click(object sender, EventArgs e)

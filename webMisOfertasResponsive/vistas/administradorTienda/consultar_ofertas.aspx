@@ -25,7 +25,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/vistas/administradorTienda/producto/insertar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">AGREGAR PRODUCTO</a>
                         <a class="dropdown-item" href="/vistas/administradorTienda/producto/actualizar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">ACTUALIZAR PRODUCTO</a>
-                        <a class="dropdown-item" href="/vistas/administradorTienda/producto/deshabilitar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">DESHABILITAR PRODUCTO</a>
+                        <%--<a class="dropdown-item" href="/vistas/administradorTienda/producto/deshabilitar_producto.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">DESHABILITAR PRODUCTO</a>--%>
                         <a class="dropdown-item" href="/vistas/administradorTienda/producto/listar_productos.aspx" style="font-family:Calibri; font-size:15px; color:dodgerblue;">LISTAR PRODUCTOS</a>
                     </div>
                 </li>
@@ -37,28 +37,47 @@
     </nav>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    <style>
+            #main
+        {
+            margin:150px auto;
+            width:600px;
+        }
+        table
+        {
+            background-color:dodgerblue;
+            text-align:left;
+            border-collapse:collapse;
+            width:100%;
+        }
+        th, td
+        {
+            padding:20px;
+        }
+        thead
+        {
+            background-color:#a5a5a5;
+            border-bottom:solid 5px #0F362D;
+            color:white;
+        }
+        tr:nth-child(even)
+        {
+            background-color:#ddd;
+        }
+        tr:hover td
+        {
+            background-color:dodgerblue;
+            color:black;            
+        }
+        
+    </style>
     <p class="text-primary text-center" style="font-size: 30px;">¡BIENVENIDO ENCARGADO DE TIENDA
         <asp:Label ID="lblUsuario" runat="server"></asp:Label>!</p>
     <div class="container" style="width:1500px;">
         <div class="panel panel-default">
             <div class="panel-heading" style="text-align:center;">OFERTAS ACTIVAS EN EL SISTEMA</div>
-            <div class="panel-body">
-                <div class="form-group">
-                    <%--                    <div class="inner-addon left-addon"> 
-                        <label for="exampleInputEmail1" style="padding-left: 10px;">Correo consumidor</label>                       
-                        <asp:TextBox ID="txtCorreoConsumidor" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" MaxLength="50" TextMode="Email" placeholder="Ingrese su correo electrónico" required></asp:TextBox>
-                        <br />
-                    </div>
-                    <div class="inner-addon left-addon">
-                        <label for="exampleInputPassword1" style="padding-left: 10px;">Contraseña consumidor</label>
-                        <asp:TextBox ID="txtPasswordConsumidor" runat="server" CssClass="form-control form-control-sm center-block" Width="350px" TextMode="Password" placeholder="Ingrese su contraseña" required></asp:TextBox>
-                    </div>--%>
-                </div>
-            </div>
-            <div class="panel-footer">
-                <%--                <asp:Button ID="btnIngresarSesionConsumidor" runat="server" Text="Iniciar Sesión" type="submit" CssClass="btn btn-primary"/>
-            </div>
-            <asp:RegularExpressionValidator ID="revCorreoConsumidor" runat="server" ErrorMessage="El correo no tiene el formato correcto" ControlToValidate="txtCorreoConsumidor" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="validadores"></asp:RegularExpressionValidator><br />--%>
+            <asp:PlaceHolder ID="phListarOfertas" runat="server">
+            </asp:PlaceHolder>
+            </div>            
         </div>
-    </div>
 </asp:Content>

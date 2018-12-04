@@ -61,14 +61,13 @@
     <Compile Include="CertificadoDescuento.cs" />
     <Compile Include="Consumidor.cs" />
     <Compile Include="ImagenBoleta.cs" />
+    <Compile Include="Oferta.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proveedor.cs" />
-    <Compile Include="TipoUsuario.cs" />
-    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="DiagramaClasesWeb.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

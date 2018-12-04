@@ -40,6 +40,6 @@ namespace webMisOfertasResponsive.WebService
 
     public class Prueba
     {
-        public string prueba = "Trololololord, Recuerden eliminar esta clase de prueba después";
+        public string prueba = "Trololololord";
     }
 }

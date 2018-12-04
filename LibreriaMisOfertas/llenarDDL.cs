@@ -51,7 +51,7 @@ namespace LibreriaMisOfertas
         {
             OracleConnection con = new OracleConnection(conexion.getConnectionString);
             con.Open();
-            OracleCommand cmd = new OracleCommand("select * from misOfertasDB.comuna order by 1 asc",con);
+            OracleCommand cmd = new OracleCommand("select * from misOfertasDB.comuna order by 2 asc", con);
             cmd.CommandType = CommandType.Text;
 
             OracleDataAdapter da = new OracleDataAdapter(cmd);
@@ -94,7 +94,7 @@ namespace LibreriaMisOfertas
 
             ddlLote.DataSource = dt;
             ddlLote.DataTextField = "rut_proveedor";
-            ddlLote.DataValueField ="id_lote";
+            ddlLote.DataValueField = "id_lote";
             ddlLote.DataBind();
             temp.Close();
 
@@ -112,9 +112,60 @@ namespace LibreriaMisOfertas
 
             ddlMarca.DataSource = dt;
             ddlMarca.DataTextField = "nombre_proveedor";
-            ddlMarca.DataValueField = "nombre_proveedor";
+            ddlMarca.DataValueField = "nombre_proveedor";            
             ddlMarca.DataBind();
             temp.Close();
+        }
+
+        public void llenarTipoOferta(DropDownList ddlTipoOferta)
+        {
+            OracleConnection temp = new OracleConnection(conexion.getConnectionString);
+            temp.Open();
+            OracleCommand cmd = new OracleCommand("SELECT * FROM misOfertasDB.tipooferta", temp);
+            cmd.CommandType = CommandType.Text;
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            ddlTipoOferta.DataSource = dt;
+            ddlTipoOferta.DataTextField = "descripcion_tipo_oferta";
+            ddlTipoOferta.DataValueField = "id_tipo_oferta";
+            ddlTipoOferta.DataBind();
+            temp.Close();
+        }
+
+        public void llenarProducto(DropDownList ddlProducto)
+        {
+            OracleConnection temp = new OracleConnection(conexion.getConnectionString);
+            temp.Open();
+            OracleCommand cmd = new OracleCommand("SELECT * FROM misOfertasDB.producto", temp);
+            cmd.CommandType = CommandType.Text;
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            ddlProducto.DataSource=dt;
+            ddlProducto.DataTextField = "nombre_producto";
+            ddlProducto.DataValueField = "sku";
+            ddlProducto.DataBind();
+            temp.Close();
+        }
+
+        public void llenarLocalVenta(DropDownList ddlLocalVenta)
+        {
+            OracleConnection temp = new OracleConnection(conexion.getConnectionString);
+            temp.Open();
+            OracleCommand cmd = new OracleCommand("SELECT a.id_local_venta, b.nombre_comuna FROM misOfertasDB.localventa a, misofertasdb.comuna b where a.id_comuna=b.id_comuna", temp);
+            cmd.CommandType = CommandType.Text;
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            ddlLocalVenta.DataSource = dt;
+            ddlLocalVenta.DataTextField = "nombre_comuna";
+            ddlLocalVenta.DataValueField = "id_local_venta";
+            ddlLocalVenta.DataBind();
+            temp.Clone();
         }
     }
 }

@@ -18,21 +18,22 @@ namespace webMisOfertasResponsive.vistas
 
         protected void btnIngresarSesionConsumidor_Click(object sender, EventArgs e)
         {
-            administracionLoginRegistroConsumidor admConsumidor = new administracionLoginRegistroConsumidor();            
+            administracionLoginRegistroConsumidor admConsumidor = new administracionLoginRegistroConsumidor();
             Consumidor cons = new Consumidor();
             cons.correoConsumidor = txtCorreoConsumidor.Text;
             cons.contrasenaConsumidor = txtPasswordConsumidor.Text;
-            if(admConsumidor.iniciarSesion(cons))
+            if (admConsumidor.iniciarSesion(cons))
             {
                 //Se crea una instancia de la clase Consumidor @temp, la cual estara dentro de una sesion interna @Session["consumidorTemporal"]
                 Consumidor temp = new Consumidor();
                 Session["usuarioTemporal"] = admConsumidor.consumidorExterno.nombreConsumidor.ToUpper();
 
                 //Se asignan los datos traidos desde la bd a la instancia @temp de Consumidor
+                temp.idConsumidor = admConsumidor.consumidorExterno.idConsumidor;
                 temp.nombreConsumidor = admConsumidor.consumidorExterno.nombreConsumidor;
                 temp.runConsumidor = admConsumidor.consumidorExterno.runConsumidor;
                 temp.correoConsumidor = admConsumidor.consumidorExterno.correoConsumidor;
-
+                temp.recibirOferta = admConsumidor.consumidorExterno.recibirOferta;
                 //se guardan la instancia @temp en la variable de session interna
                 Session["consumidorTemporal"] = temp;
                 Response.Redirect("/vistas/consumidor/ofertas_consumidor.aspx");

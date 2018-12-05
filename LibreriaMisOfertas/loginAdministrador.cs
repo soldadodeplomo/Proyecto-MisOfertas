@@ -10,7 +10,7 @@ namespace LibreriaMisOfertas
 {
     public class loginAdministrador
     {
-        public AdministradorTienda admTienda = new AdministradorTienda();        
+        public AdministradorTienda admTienda = new AdministradorTienda();
         public bool iniciarSesionAdm(string rut, string contrasena)
         {
             conexionOracle temp = new conexionOracle();
@@ -23,7 +23,7 @@ namespace LibreriaMisOfertas
             if (reader.Read())
             {
                 admTienda.id = Convert.ToInt32(reader["id_tipo_usuario"].ToString());
-                if (admTienda.id==1)
+                if (admTienda.id == 1)
                 {
                     admTienda.rutAdm = reader["rut_usuario"].ToString();
                     admTienda.contrasena = reader["contrasena_usuario"].ToString();

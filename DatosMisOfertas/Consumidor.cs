@@ -8,6 +8,7 @@ namespace DatosMisOfertas
 {
     public class Consumidor
     {
+        public int idConsumidor { get; set; }
         public string runConsumidor { get; set; }
         public string nombreConsumidor { get; set; }
         public string correoConsumidor { get; set; }
@@ -22,8 +23,16 @@ namespace DatosMisOfertas
             this.contrasenaConsumidor = contrasena;
         }
 
-        public Consumidor(string runConsumidor, string nombreConsumidor, string correoConsumidor, string contrasenaConsumidor, char recibirOferta, int idComunaConsumidor, int idTipoConsumidor)
+
+
+        public Consumidor()
         {
+
+        }
+
+        public Consumidor(int idConsumidor, string runConsumidor, string nombreConsumidor, string correoConsumidor, string contrasenaConsumidor, char recibirOferta, int idComunaConsumidor, int idTipoConsumidor)
+        {
+            this.idConsumidor = idConsumidor;
             this.runConsumidor = runConsumidor;
             this.nombreConsumidor = nombreConsumidor;
             this.correoConsumidor = correoConsumidor;
@@ -31,11 +40,6 @@ namespace DatosMisOfertas
             this.recibirOferta = recibirOferta;
             this.idComunaConsumidor = idComunaConsumidor;
             this.idTipoConsumidor = idTipoConsumidor;
-        }
-
-        public Consumidor()
-        {
-
         }
     }
 }

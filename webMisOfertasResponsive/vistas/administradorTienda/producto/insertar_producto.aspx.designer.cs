@@ -85,15 +85,6 @@ namespace webMisOfertasResponsive.vistas.administradorTienda.producto {
         protected global::System.Web.UI.WebControls.DropDownList ddlRubro;
         
         /// <summary>
-        /// Control ddLote.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddLote;
-        
-        /// <summary>
         /// Control ddlSubFamilia.
         /// </summary>
         /// <remarks>

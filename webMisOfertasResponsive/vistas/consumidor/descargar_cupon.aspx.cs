@@ -37,7 +37,7 @@ namespace webMisOfertasResponsive.vistas.consumidor
             }
             correo.generarCodigoBarras(consumidorTemporal);
             correo.generarPDF(consumidorTemporal);
-            //correo.enviarCorreoOferta(consumidorTemporal);
+            correo.enviarCorreoOferta(consumidorTemporal);
             correo.insertarBitacora(consumidorTemporal);
             mostrarPDF();
         }
@@ -47,14 +47,14 @@ namespace webMisOfertasResponsive.vistas.consumidor
             Session.Clear();
             Session.RemoveAll();
             Response.Redirect("/vistas/login_consumidor.aspx");
-        }     
-        
+        }
+
         public void mostrarPDF()
         {
             Response.Clear();
-            string filePath = @"C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\webMisOfertasResponsive\tempDocs\cupon_descuento_1_" + consumidorTemporal.runConsumidor+".pdf";
+            string filePath = @"C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\webMisOfertasResponsive\tempDocs\cupon_descuento_1_" + consumidorTemporal.runConsumidor + ".pdf";
             Response.ContentType = "application/pdf";
             Response.WriteFile(filePath);
-        }                 
+        }
     }
 }

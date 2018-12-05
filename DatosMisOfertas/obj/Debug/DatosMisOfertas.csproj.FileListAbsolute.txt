@@ -11,3 +11,15 @@ C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\D
 C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.xml
 C:\Users\nicolas\Documents\Visual Studio 2015\Projects\webMisOfertasResponsive\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\DatosMisOfertas.dll.config
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\DatosMisOfertas.dll
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\DatosMisOfertas.pdb
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\EntityFramework.dll
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\itextsharp.dll
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\EntityFramework.xml
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\bin\Debug\itextsharp.xml
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\obj\Debug\DatosMisOfertas.dll
+C:\Users\nicolas\Source\Repos\Proyecto-MisOfertas\DatosMisOfertas\obj\Debug\DatosMisOfertas.pdb

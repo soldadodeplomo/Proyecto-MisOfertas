@@ -26,9 +26,10 @@ namespace webMisOfertasResponsive.WebService
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            DatosMisOfertas.Consumidor c = new DatosMisOfertas.Consumidor();
             //Aquí un ejemplo de como usaremos los métodos de la InterfazWebService
             //en este caso lo use para evaluar, pero pueden usarlos para lo que sea necesario, siempre y cuando sea en este .CS
-            if (new InterfazWebService.InterfazWebService().isConnected())
+            if (new InterfazWebService.InterfazWebService().isConnected(c))
             {
                 Prueba newObj = new Prueba();
                 //A través de esta variable renderizamos los objetos JSON que necesitemos para así enviar datos de vuelta a la aplicación desktop,
